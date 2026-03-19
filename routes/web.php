@@ -8,9 +8,12 @@ use App\Http\Controllers\AdminController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/testpage', [AdminController::class,'adminTest'])->middleware(['auth','verified','admin']);
 
 Route::get('/dashboard',[UserController::class,'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth','admin'])->group(function () {
+    Route::get('/addcategory', [AdminController::class, 'addCategory'])->name('admin.category');
+    Route::post('/addcategory', [AdminController::class, 'postAddCategory'])->name('admin.postaddcategory');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
