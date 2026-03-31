@@ -16,10 +16,6 @@ export default {
             },
         },
     },
-
-    corePlugins: {
-        preflight: false, // Tắt CSS reset của Tailwind
-    },
     
     plugins: [forms],
 };

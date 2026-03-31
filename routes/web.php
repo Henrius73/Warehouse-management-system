@@ -19,8 +19,12 @@ Route::middleware(['auth','admin'])->group(function () {
 
     Route::get('/deletecategory/{id}', [AdminController::class, 'deleteCategory'])->name('admin.deletecategory');
 
-    Route::get('/udpatecategory/{id}', [AdminController::class, 'updateCategory'])->name('admin.updatecategory');
+    Route::get('/updatecategory/{id}', [AdminController::class, 'updateCategory'])->name('admin.updatecategory');
+
+    Route::post('/updatecategory/{id}', [AdminController::class, 'postUpdateCategory'])->name('admin.postupdatecategory');
+
 });
+    
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

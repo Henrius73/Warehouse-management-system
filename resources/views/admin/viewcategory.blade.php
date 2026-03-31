@@ -25,7 +25,7 @@
                                 <td class="px-6 py-4">
                                     <a href="{{route('admin.deletecategory',$category->id)}}"
                                     class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors duration-200" onclick="return confirm('Bạn có chắc ko?')">Delete</a>
-                                    <a href="{{route('admin.deletecategory',$category->id)}}"
+                                    <a href="{{route('admin.updatecategory',$category->id)}}"
                                     class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200" >Update</a>
                                 </td>
                             </tr>
