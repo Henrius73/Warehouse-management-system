@@ -11,8 +11,15 @@ Route::get('/', function () {
 
 Route::get('/dashboard',[UserController::class,'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::middleware(['auth','admin'])->group(function () {
-    Route::get('/addcategory', [AdminController::class, 'addCategory'])->name('admin.category');
+    Route::get('/addcategory', [AdminController::class, 'addCategory'])->name('admin.addcategory');
+
     Route::post('/addcategory', [AdminController::class, 'postAddCategory'])->name('admin.postaddcategory');
+    
+    Route::get('/viewcategory', [AdminController::class, 'viewCategory'])->name('admin.viewcategory');
+
+    Route::get('/deletecategory/{id}', [AdminController::class, 'deleteCategory'])->name('admin.deletecategory');
+
+    Route::get('/udpatecategory/{id}', [AdminController::class, 'updateCategory'])->name('admin.updatecategory');
 });
 
 Route::middleware('auth')->group(function () {

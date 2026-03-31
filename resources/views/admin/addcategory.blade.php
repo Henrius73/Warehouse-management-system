@@ -9,8 +9,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <form action="{{route('admin.postaddcategory'}}" method="post">
-                        <input type="text" name="category_name" placeholder="Category Name" required>
+                     <form action="{{route('admin.postaddcategory')}}" method="post">
+                        @csrf
+                        <input style="color: black" type="text" name="category_name" placeholder="Category Name" required>
                         <input style="background-color: blue; color: white; padding: 8px " type="submit" name="submit" value="Add category">
                     </form>
                 </div>
