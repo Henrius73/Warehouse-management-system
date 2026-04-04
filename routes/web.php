@@ -23,6 +23,17 @@ Route::middleware(['auth','admin'])->group(function () {
 
     Route::post('/updatecategory/{id}', [AdminController::class, 'postUpdateCategory'])->name('admin.postupdatecategory');
 
+    Route::get('/addsupplier', [AdminController::class, 'addSupplier'])->name('admin.addsupplier');
+
+    Route::post('/addsupplier', [AdminController::class, 'postAddSupplier'])->name('admin.postaddsupplier');
+
+    Route::get('/viewsupplier', [AdminController::class, 'viewSupplier'])->name('admin.viewsupplier');
+
+    Route::get('/deletesupplier/{id}', [AdminController::class, 'deleteSupplier'])->name('admin.deletesupplier');
+
+    Route::get('/updatesupplier/{id}', [AdminController::class, 'updateSupplier'])->name('admin.updatesupplier');
+
+    Route::post('/postupdatesupplier/{id}', [AdminController::class, 'postUpdateSupplier'])->name('admin.postupdatesupplier');
 });
     
 
