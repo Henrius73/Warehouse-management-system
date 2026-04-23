@@ -65,6 +65,29 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- <div class="relative flex items-center" x-data="{ open: false }" @click.away="open = false">
+                        <button @click="open = ! open" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
+                            Product 
+                            <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+                        </button>
+                        
+                        <div x-show="open" x-transition style="display: none;" class="absolute top-full left-0 z-50 mt-1 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                            <ul class="p-2 space-y-1 text-sm text-body font-medium">
+                                <li>
+                                    <x-nav-link :href="route('admin.addproduct')" :active="request()->routeIs('admin.addsupplier')"
+                                        class="block w-full text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                                        {{ __('Add Product') }}
+                                    </x-nav-link>
+                                </li>
+                                <li>
+                                    <x-nav-link href="#"
+                                        class="block w-full text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                                        {{ __('View Product') }}
+                                    </x-nav-link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -128,7 +151,7 @@
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
+    <!-- Responsive Navigation Menu
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden bg-gray-800 border-t border-gray-700">
         <div class="pt-2 pb-3 space-y-1 px-3">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
@@ -147,7 +170,7 @@
                 class="text-gray-300 hover:text-white hover:bg-gray-700 rounded-md">
                 {{ __('View Supplier') }}
             </x-responsive-nav-link>
-        </div>
+        </div> -->
 
         <!-- Responsive Settings -->
         <div class="pt-4 pb-3 border-t border-gray-700 px-3">

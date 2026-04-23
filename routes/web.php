@@ -34,6 +34,8 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::get('/updatesupplier/{id}', [AdminController::class, 'updateSupplier'])->name('admin.updatesupplier');
 
     Route::post('/postupdatesupplier/{id}', [AdminController::class, 'postUpdateSupplier'])->name('admin.postupdatesupplier');
+
+    Route::get('/addproduct', [AdminController::class, 'addProduct'])->name('admin.addproduct');
 });
     
 

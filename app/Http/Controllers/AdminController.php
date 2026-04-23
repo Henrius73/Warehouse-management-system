@@ -93,4 +93,9 @@ class AdminController extends Controller
 
         return redirect('/viewsupplier');
     }
+
+    public function addProduct()
+    {
+        return view('admin.addproduct');
+    }
 }
